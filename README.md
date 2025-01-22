@@ -10,8 +10,9 @@ For video processing and frame extraction.
 
 # 2.face_recognition
 For facial detection and recognition.
-### pip install face_recognition
-
+```
+pip install face_recognition
+```
 # 3. Dlib
 Backend library for face_recognition; also provides facial detection and alignment features.
 ```
