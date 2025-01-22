@@ -1,10 +1,10 @@
-# ImageProcessing
+ImageProcessing
 This is final project. It's about Face recognition.
 
 # Required Libraries
 # 1. OpenCV
 For video processing and frame extraction.
-### pip install opencv-python
+### 'pip install opencv-python'
 
 # 2.face_recognition
 For facial detection and recognition.
