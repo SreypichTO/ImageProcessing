@@ -2,15 +2,21 @@ ImageProcessing
 This is final project. It's about Face recognition.
 
 # Required Libraries
-# 1. OpenCV
+# 1. Python
+
+# 2. Flash
+###command
+pip install flask opencv-python numpy deepface werkzeug
+
+# 3. OpenCV
 For video processing and frame extraction.
 ### pip install opencv-python
 
-# 2.face_recognition
+# 4.face_recognition
 For facial detection and recognition.
 ### pip install face_recognition
 
-# 3. Dlib
+# 5. dlib
 Backend library for face_recognition; also provides facial detection and alignment features.
 ### pip install dlib
 
@@ -18,5 +24,5 @@ Backend library for face_recognition; also provides facial detection and alignme
 For efficient numerical operations and array management.
 ### pip install numpy pillow
 
-# 5. FFmpeg (optional but recommended)
+# 5. FFmpeg 
  ### Download and install FFmpeg from FFmpeg.org, and add its bin folder to our system's PATH.

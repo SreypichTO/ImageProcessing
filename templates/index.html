@@ -7,8 +7,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #1a202c; /* Dark background */
-            color: #fff; /* White text */
+            background-color: #1a202c; 
+            color: #fff; 
         }
         .container {
             max-width: 700px;
@@ -60,7 +60,6 @@
         const videoContainer = document.getElementById('videoContainer');
         const processedVideo = document.getElementById('processedVideo');
 
-        // Handle Form Submission
         uploadForm.addEventListener('submit', async (event) => {
             event.preventDefault();
 
@@ -86,24 +85,26 @@
                     return;
                 }
 
-                // Display results
+                // Get matched frames and timestamps
                 const matchedFrames = data.matched_frames || [];
+                const matchedTimestamps = data.matched_timestamps || [];
                 const totalFrames = data.total_frames || 0;
 
+                // Display results including timestamps
                 resultsContent.textContent = `
 Matched Frames: ${matchedFrames.join(', ') || 'None'}
+Matched Timestamps: ${matchedTimestamps.join(', ') || 'None'}
 Total Frames Processed: ${totalFrames}
 `;
                 resultsDiv.classList.remove('hidden');
 
                 // Display processed video
-                processedVideo.src = `/${data.processed_video_url}`; // Ensure the path is relative to the Flask server
+                processedVideo.src = `/${data.processed_video_url}`; 
                 videoContainer.classList.remove('hidden');
             } catch (error) {
                 resultsContent.textContent = `Error: Unable to process the request. Please try again.`;
                 resultsDiv.classList.remove('hidden');
             } finally {
-                // Re-enable the form
                 uploadForm.querySelector('button[type="submit"]').textContent = "Find Face";
                 uploadForm.querySelector('button[type="submit"]').disabled = false;
             }
